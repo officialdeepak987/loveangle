@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html  lang="en">
 
 <head>
@@ -315,4 +315,111 @@ draw();
       
   </script>
 
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+
+    <style>
+
+body {
+margin: 0;
+padding: 0;
+min-height: 100vh;
+display: flex;
+place-Items: center;
+justify-content: center;
+background:#262626;
+}
+.heart{
+width: 100px;
+height: 100px;
+background: red;
+transform: rotate(-45deg);
+box-shadow: -10px 10px 120px red; 
+animation: heart 0.6s linear infinite;
+}
+@keyframes heart {
+    0%{
+transform: rotate(-45deg) scale(1.07);
+    }
+100% {
+transform:rotate(-45deg) scale(1.0);
+}
+100% {
+transform: rotate(-45deg) scale(0.8);
+}
+}
+
+.heart::before {
+content:"";
+position: absolute;
+width: 100px;
+height: 100px;
+background: red;
+top: -50%;
+border-radius: 60px;
+box-shadow: -10px 10px 120px red;
+
+}
+
+
+.heart::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    right: -50%;
+    border-radius: 60px;
+    box-shadow: -10px 10px 120px red;
+}
+
+
+.i{
+    font-size: 70px;
+    position: relative;
+    left: 20px;
+    color: #fc8484;
+    
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+       <div class="i">
+        <h1>I</h1>
+       </div>
+
+        <div class="heart">
+
+
+
+        </div>
+
+        <div class="i">
+            <h1>u</h1>
+           </div>
+        </div>
+
+  
+  
+        <audio id="background-music" autoplay loop hidden>
+            <source src="./assects/leva-eternity-149473.mp3" type="audio/mpeg">
+          </audio>
+
+
+
+
+    
+</body>
 </html>
