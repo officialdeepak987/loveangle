@@ -387,7 +387,7 @@ box-shadow: -10px 10px 120px red;
     font-size: 70px;
     position: relative;
     left: 20px;
-    color: #fc8484;
+    color: #fdfdfd;
     
 }
     </style>
@@ -418,8 +418,17 @@ box-shadow: -10px 10px 120px red;
           </audio>
 
 
+  <script>
+    const backgroundMusic = document.getElementById('background-music');
 
+    // Play the audio
+    backgroundMusic.play();
 
-    
+    // Pause the audio
+    backgroundMusic.pause();
+
+    // Adjust the volume
+    backgroundMusic.volume = 0.5;
+  </script>  
 </body>
 </html>
