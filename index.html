@@ -1,113 +1,259 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="presonnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link  href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
     <style>
 
-body {
-margin: 0;
-padding: 0;
-min-height: 100vh;
-display: flex;
-place-Items: center;
-justify-content: center;
-background:#262626;
-}
-.heart{
-width: 100px;
-height: 100px;
-background: red;
-transform: rotate(-45deg);
-box-shadow: -10px 10px 120px red; 
-animation: heart 0.6s linear infinite;
-}
-@keyframes heart {
-    0%{
-transform: rotate(-45deg) scale(1.07);
-    }
-100% {
-transform:rotate(-45deg) scale(1.0);
-}
-100% {
-transform: rotate(-45deg) scale(0.8);
-}
-}
-
-.heart::before {
-content:"";
-position: absolute;
-width: 100px;
-height: 100px;
-background: red;
-top: -50%;
-border-radius: 60px;
-box-shadow: -10px 10px 120px red;
-
-}
 
 
-.heart::after{
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: red;
-    right: -50%;
-    border-radius: 60px;
-    box-shadow: -10px 10px 120px red;
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
 }
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            place-Items: center;
+            justify-content: center;
+            background: #f2a5a5;
+        }
 
 
-.i{
-    font-size: 70px;
-    position: relative;
-    left: 20px;
-    color: #fdfdfd;
+        .heart {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transform: rotate(-45deg);
+            box-shadow: -10px 10px 120px red;
+            animation: heart 0.6s linear infinite;
+        }
+
+        /* .heart{
+            animation: zoom 0.2s linear;
+            animation-iteration-count: infinite;
+        } */
+
+
+
+
+
+        @keyframes heart {
+            0% {
+                transform: rotate(-45deg) scale(1.07);
+            }
+
+            100% {
+                transform: rotate(-45deg) scale(1.0);
+            }
+
+            100% {
+                transform: rotate(-45deg) scale(0.8);
+            }
+        }
+
+        .heart::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            top: -50%;
+            border-radius: 60px;
+            box-shadow: -10px 10px 120px red;
+
+        }
+
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            right: -50%;
+            border-radius: 60px;
+            box-shadow: -10px 10px 120px red;
+        }
+
+        .i {
+            font-size: 70px;
+            position: relative;
+            left: 20px;
+            color: #fdfdfd;
+
+        }
+
+        .main{
+            padding-top: 40%;
+        }
+        input{
+            font-size: 30px;
+            width: 200px;
+            border: none;
+            outline: none;
+            padding: 20px;
+            border: 2px solid red;
+            border-radius: 20px;
+            background: transparent;
+            padding-left: 10px;
+        }
+
+        button{
+           padding: 30px;
+           font-size: 40px;
+           background-color: #e84040;
+           color: #fff;
+           /* border: 2px solid gray; */
+           border: none;
+           box-shadow: 0px 0px 3px rgb(0,0,0.3);
+           border-radius: 10px; 
+          cursor: pointer;
+        }
+        .contant{
+            display: none;
+            font-size: 30px;
+            font-family: 'Pacifico', cursive;
+            color: red;
+            text-shadow: 0 0 9px blue, 
+            0 0 7px #fff,
+            0 0 10px #fff;
+        }
+
     
-}
+        @media(max-width:350px){
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        
+
+
+
     </style>
 </head>
+
 <body>
 
     <div class="container">
 
-       <div class="i">
-        <h1>I</h1>
-       </div>
-
-        <div class="heart">
 
 
+        <div class="main" id="m1">
+            <center>
+    
+                <h1 style="color: #e2e2e2;">Enter Your Name</h1>
+                <br>
+                <br>
+                <input type="text" placeholder="Enter Name" id="name">
+                <br>
+                <br>
+                <button onclick="show()" style="padding: 10px;"> Click</button>
+            </center>
+           
+    
+    
+            </div>
+            <div class="main2">
+                <div class="i">
+                    <h1>I</h1>
+                </div>
+                <div class="heart">
+                </div>
+        
+                <div class="i">
+                    <h1>u</h1>
+                </div>
 
+            </div>
+
+
+
+            <div class="contant" id="c1">
+                <center>
+                <h1>I</h1>
+                <!-- <div class="heart">
+                </div> -->
+                <h1>you</h1>
+                <h1>Dear</h1>
+                <h2 id="addname"></h2>
+                <h1>Ji</h1>
+    
+            </center>
         </div>
 
-        <div class="i">
-            <h1>u</h1>
-           </div>
-        </div>
+    </div>
+    <audio id="background-music" autoplay loop hidden>
+        <source src="./assects/leva-eternity-149473.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!--  -->
 
   
-  
-        <audio id="background-music" autoplay loop hidden>
-            <source src="./assects/leva-eternity-149473.mp3" type="audio/mpeg">
-          </audio>
+       
 
 
-  <script>
-    const backgroundMusic = document.getElementById('background-music');
 
-    // Play the audio
-    backgroundMusic.play();
 
-    // Pause the audio
-    backgroundMusic.pause();
 
-    // Adjust the volume
-    backgroundMusic.volume = 0.5;
-  </script>  
+
+    <script>
+        const backgroundMusic = document.getElementById('background-music');
+
+        // Play the audio
+        backgroundMusic.play();
+
+        // Pause the audio
+        backgroundMusic.pause();
+
+        // Adjust the volume
+        backgroundMusic.volume = 0.5;
+
+
+
+        // 
+
+        <!--  --> 
+
+      function show(){
+        var name=document.getElementById('name').value;
+
+        if(document.getElementById('name').value=="")
+        {
+            alert("Please enter your Name");
+        }
+        else{
+            document.getElementById("addname").innerHTML=name;
+        
+        document.getElementById('m1').style.display="none";
+        document.getElementById('c1').style.display="block";
+      }
+    }
+
+    </script>
+
+
+
+
+
+
+
+           
 </body>
+
 </html>
